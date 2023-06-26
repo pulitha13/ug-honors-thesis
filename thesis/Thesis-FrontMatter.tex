@@ -1,0 +1,122 @@
+% Use Roman numerals (i, ii, iii, etc.) for page numbers in the front matter.
+\pagenumbering{roman}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITLE PAGE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% No headers or footers on the title page.
+\thispagestyle{empty}
+
+\begingroup
+\centering
+\setstretch{1.0}
+~
+\\[1em]
+\sffamily\bfseries\fontsize{26}{31.2}\selectfont
+\DocumentTitle
+\\[0.4in]
+\normalfont\large
+Thesis by
+\\[0.25em]
+\sffamily\bfseries\Large
+\AuthorName
+\\[0.4in]
+\normalfont\normalsize
+In Partial Fulfillment of the Requirements
+\\[0.5em]
+for the Degree of
+\\[0.5em]
+Bachelors of Science
+\\[0.5em]
+in
+\\[0.5em]
+Electrical Engineering 
+\vfill
+\includegraphics[width=1.8in]
+{Figures/UCLA_logo.png}
+\\[1.5em]
+University California, Los Angeles
+\\[0.5em]
+Los Angeles, California, USA
+\\[1.5em]
+2023
+\\[0.5em]
+\par
+\endgroup
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COPYRIGHT PAGE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{plain}
+\setcounter{page}{2}
+
+\begingroup
+\centering
+\setstretch{1.0}
+\null
+\vfill
+{\sffamily\textcopyright}~2023
+\\[0.5em]
+\AuthorName
+\\[0.5em]
+All Rights Reserved
+\par
+\endgroup
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DEDICATION PAGE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begingroup
+%\centering
+%\setstretch{1.0}
+%~
+%\\[1in]
+%\textit{Insert dedication here}
+%\par
+%\endgroup
+
+%\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACKNOWLEDGMENTS.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+
+I would like to dedicate this section of the thesis to acknowledging the contributions of my supervisors, predecessors, and peers that made this work possible. I thank Professor Richard Wesel for introducing me to and supporting me through the list decoding and noise generation projects. He has also been an amazing source of mentorship providing me with technical understanding of coding theory where I lacked it and a role model for leading, collaborating with, and communicating with a diverse team. Furthermore, I would like to thank Caleb Terril and Chester Hulse for being amazing mentors in this lab. Their work has been the foundation for which the work presented in this paper adds to. Lastly I would like to thank my peers Aadhirahvi Ravikumar, Daniel Chen, and the rest of the CSL undergraduates that have contributed to this project and its adjacent ones. 
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABSTRACT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Efficient, lossless data transmission has proven integral to the functioning of modern society. Short block length codes, more specifically convolutional codes, have provided ultra reliable low latency performance in applications such as cellular and satellite communications. Furthermore, CRC-aided, tail-biting convolutional codes have shown to approach the RCU bound with a large number of states. Serial List Viterbi Decoding (SLVD) and Parallel List Viterbi Decoding (PLVD) are methods of decoding these codes that approximate Maximum-Likelihood (ML) as the list size increases. This thesis will overview an implementation of PLVD on a field-programmable gate array (FPGA) board as well as justify the algorithmic advantages of PLVD for hardware acceleration. This design has been heavily inspired by the work of Chester Hulse, former member of CSL, and this paper will illustrate that the modifications result in a more resource efficient implementation of his work. These changes have made room for more hardware accelerated modules such as an additive white gaussian noise (AWGN) generator on board. This thesis will also briefly introduce an implementation of this in hardware.
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TABLE OF CONTENTS (TOC), LISTS OF FIGURES, TABLES, ETC.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\clearpage
+
+% Use Arabic numerals (1, 2, 3, etc.) for subsequent page numbers.
+\pagenumbering{arabic}

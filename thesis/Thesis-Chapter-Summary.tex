@@ -1,0 +1,10 @@
+
+\chapter{Conclusion}
+This thesis summarizes techniques to reduce the computational complexity of CRC-aided decoding of TBCCs on an FPGA as well as introduce optimizations to existing implementations of the PLVD decoding scheme. 
+
+We first explain the motivation behind usage of CRC-aided TBCC and introduce techniques for interpreting encoding and decoding using the PLVD. We then introduce an existing implementation of PLVD and discuss the drawbacks of the design. We make modifications to this implementation that introduce parameterized resource usage and serialized execution. To do this we design an algorithm that manages memory allocation of edge lists in a way that is hardware synthesizable and efficient. 
+In the final section, we showcase a hardware implementation of a AWGN generator that utilizes the Box-Muller transformation and efficient function segmentation to produce highly accurate AWGN samples. This hardware module can be utilized for simulating all kinds of codes on an FPGA as it is designed to be resource efficient.
+
+With the accomplishments detailed in this paper, we are one step closer to realizing an end to end hardware implementation CRC-aided TBCC code transmission. We aim to finalize these implementations, execute simulations of performance, and compare results with other TBCC decoding schemes and theoretical performance bounds.
+
+Work on this design is ongoing, and this thesis is intended to be a resource for those interested in the practical implementation of PLVD of CRC-aided TBCC on an FPGA as well as AWGN generation. 
